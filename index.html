@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SNSで暴れるナラティブ</title>
+    <link rel="stylesheet" href="./styles.css?v=20260603f" />
+  </head>
+  <body>
+    <header class="app-header compact-header">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"><span>N</span></div>
+        <div>
+          <h1>SNSで暴れるナラティブ</h1>
+          <p>ナラティブを実感しよう。</p>
+        </div>
+      </div>
+      <form class="admin-login" id="adminLogin">
+        <input id="adminPassword" type="password" inputmode="numeric" placeholder="管理PASS" autocomplete="off" />
+        <button type="submit">管理</button>
+      </form>
+      <a id="truthPageLink" class="admin-link-button truth-page-link" href="./truth.html">真実</a>
+      <div class="admin-actions" id="adminActions" hidden>
+        <button id="clearAllButton" type="button">全削除</button>
+      </div>
+    </header>
+
+    <main class="app-shell narrative-shell">
+      <section class="case-grid" id="casesLayout" aria-label="3つの事例"></section>
+    </main>
+
+    <div class="modal-backdrop" id="responseModal" hidden>
+      <div class="response-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <header>
+          <h2 id="modalTitle">回答を投稿</h2>
+          <button id="modalCloseButton" type="button" aria-label="閉じる">×</button>
+        </header>
+        <form id="modalForm" class="modal-form">
+          <textarea id="modalStory" maxlength="700" placeholder="AとBの間に、どんなストーリーがあると思いますか。" autofocus></textarea>
+          <div class="modal-footer">
+            <span id="modalCharCount">0 / 700</span>
+            <button type="submit">送信</button>
+          </div>
+          <p class="status" id="modalStatus" role="status"></p>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="./app.js?v=20260603e"></script>
+  </body>
+</html>
