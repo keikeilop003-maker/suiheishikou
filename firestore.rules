@@ -1,0 +1,14 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /submissions/{document} {
+      allow read: if true;
+      allow create: if request.resource.data.story is string
+        && request.resource.data.story.size() > 0
+        && request.resource.data.story.size() <= 700
+        && request.resource.data.pairId is string;
+      allow update, delete: if true;
+    }
+  }
+}
