@@ -140,9 +140,9 @@ cite {
   top: 0;
   bottom: 0;
   left: -12px;
-  width: 3px;
+  width: 1px;
   border-radius: 999px;
-  background: linear-gradient(180deg, var(--blue), var(--yellow), var(--red));
+  background: #000;
 }
 
 .case-card > header {
@@ -220,6 +220,10 @@ cite {
 
 .persona-list span {
   font-weight: 850;
+}
+
+.no-break {
+  white-space: nowrap;
 }
 
 .fact-box p,
