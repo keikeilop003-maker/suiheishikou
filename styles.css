@@ -111,8 +111,8 @@ blockquote {
 }
 
 cite {
-  display: block;
-  margin-top: 10px;
+  display: inline;
+  margin-left: 0.7em;
   color: var(--muted);
   font-size: 0.92rem;
   font-style: normal;
