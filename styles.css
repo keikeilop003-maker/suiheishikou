@@ -228,6 +228,10 @@ cite {
   font-weight: 800;
 }
 
+.truth-panel p + p {
+  margin-top: 10px;
+}
+
 .fact-list {
   margin: 8px 0 0;
   padding-left: 1.2em;
