@@ -121,16 +121,28 @@ cite {
 .case-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
+  gap: 24px;
   align-items: start;
 }
 
 .case-card {
+  position: relative;
   display: grid;
   gap: 12px;
   min-width: 0;
   padding: 0;
   background: transparent;
+}
+
+.case-card + .case-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -12px;
+  width: 3px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--blue), var(--yellow), var(--red));
 }
 
 .case-card > header {
@@ -139,22 +151,9 @@ cite {
 }
 
 .fact-pair {
-  position: relative;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
-}
-
-.fact-pair::before {
-  content: "";
-  position: absolute;
-  top: 10px;
-  bottom: 10px;
-  left: 50%;
-  width: 3px;
-  border-radius: 999px;
-  background: linear-gradient(180deg, var(--blue), var(--red));
-  transform: translateX(-50%);
 }
 
 .fact-box,
@@ -276,6 +275,10 @@ cite {
   .case-grid {
     grid-template-columns: 1fr;
   }
+
+  .case-card + .case-card::before {
+    display: none;
+  }
 }
 
 @media (max-width: 680px) {
@@ -292,7 +295,4 @@ cite {
     grid-template-columns: 1fr;
   }
 
-  .fact-pair::before {
-    display: none;
-  }
 }
