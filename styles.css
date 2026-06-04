@@ -88,11 +88,7 @@ main {
 
 .quote-section {
   margin-bottom: 16px;
-  border: 3px solid var(--line);
-  border-radius: 8px;
-  padding: clamp(14px, 2.2vw, 22px);
-  background: #fff;
-  box-shadow: var(--shadow);
+  padding: 6px 0 14px;
 }
 
 .kicker,
@@ -130,17 +126,13 @@ cite {
   display: grid;
   gap: 12px;
   min-width: 0;
-  border: 3px solid var(--line);
-  border-radius: 8px;
-  padding: 12px;
-  background: rgba(255, 250, 241, 0.97);
-  box-shadow: var(--shadow);
+  padding: 0;
+  background: transparent;
 }
 
 .case-card > header {
   min-height: 74px;
-  border-bottom: 3px solid var(--line);
-  padding-bottom: 10px;
+  padding: 0 2px 2px;
 }
 
 .fact-pair {
