@@ -222,10 +222,6 @@ cite {
   font-weight: 850;
 }
 
-.no-break {
-  white-space: nowrap;
-}
-
 .fact-box p,
 .public-view p,
 .truth-panel p {
